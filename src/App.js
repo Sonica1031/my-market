@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Route, Link} from 'react-router-dom';
+import edibles from './components/edibles';
+import { Item } from './components/Item';
+import data from './data';
 
 function App() {
+  const [value, setValue] = useState(data)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Link path to="/">Home</Link>
+        <Link path to="/edibles">Edibles</Link>
+        <Link path to="/leaves">Leaves</Link>
+        <Link path to="/bongs">Accessories</Link> 
       </header>
+      <div>
+        <Route exact path="/edibles" component={edibles} />
+        <Route exact path="/edibles/:id" render={props => <Item {...props} item={value}/>}/>
+      </div>
     </div>
   );
 }

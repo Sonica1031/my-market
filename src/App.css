@@ -1,38 +1,41 @@
 .App {
-  text-align: center;
+  background: url("./images/Puff\ Palace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  margin-top: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 5rem;
+  color: #248729;
+  text-shadow: 2px 2px 2px #432244;
+  font-weight: 900;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-header{
+  padding-top: 40px;
+}
+
+.edible-container{
+  margin-top: 200px;
+  padding: 10px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.edible-columns{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-wrap: wrap;
+  padding: 20px;
 }
