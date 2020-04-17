@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Route, Link} from 'react-router-dom';
+import Home from './components/Home';
 import edibles from './components/edibles';
 import { Item } from './components/Item';
 import { edible } from './data';
@@ -24,6 +25,7 @@ function App() {
         <Link className="aTag" path to="/accessories">Accessories</Link>
       </header>
       <div>
+        <Route exact path="/" component={Home} />
         <Route exact path="/edibles" component={edibles} />
         <Route exact path="/edibles/:id" render={props => <Item {...props} item={value}/>}/>
         <Route exact path="/leaves" component={leaves} />
