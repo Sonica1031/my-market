@@ -39,7 +39,7 @@ nav{
   flex-wrap: wrap;
 }
 
-.edible-columns{
+.columns{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

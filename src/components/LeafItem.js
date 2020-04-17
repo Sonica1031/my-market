@@ -1,28 +1,27 @@
 import React from 'react';
-import gummi from '../images/gummi.jpeg';
+import dryleaves from '../images/dryleaves.jpeg';
 import cartButton from '../images/button-cart.png';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export const Item = (props) =>{
-    const item = props.item.find( item => `${item.id}` === props.match.params.id )
+
+const LeafItem = (props) =>{
+    console.log(props)
+    let item = props.item.find(item => `${item.id}` === props.match.params.id)
     let qty = document.getElementsByClassName("qty");
 
     const addToCart = (e) =>{
-    e.preventDefault()
-    let qtyInt = parseInt(qty[0].value)
-    let result = item.qty + qtyInt
-    console.log(result);
-    qty[0].value = "";
-    }
-    let img = document.createElement("img");
-    img.src = item.imageSRC
-    let divForImage = document.getElementsByClassName("edible-single")
-    
-    return (
+        e.preventDefault()
+        let qtyInt = parseInt(qty[0].value)
+        let result = item.qty + qtyInt
+        console.log(result);
+        qty[0].value = "";
+        }
+
+    return(
         <div className="edible-single">
-        <p className="aTagForEdibles">{item.description}</p>
-        <img src={gummi} width="500px"/>
-        <form>
+            <img src={dryleaves} width="500px"></img>
+            <p>{item.description}</p>
+            <form>
         <div className="flex-cart">
         <div className="cart">
         <label className="qtyLabel" htmlFor="qty">
@@ -39,5 +38,7 @@ export const Item = (props) =>{
         </div>
         </form>
         </div>
-    );
+    )
 }
+
+export default LeafItem;
