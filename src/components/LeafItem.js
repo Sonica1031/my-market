@@ -1,6 +1,7 @@
 import React from 'react';
 import dryleaves from '../images/dryleaves.jpeg';
 import cartButton from '../images/button-cart.png';
+import darkmodeCart from '../images/darkmode-cart.png'
 import { Link } from 'react-router-dom';
 
 
@@ -34,7 +35,7 @@ const LeafItem = (props) =>{
         </label>
         <button onClick={addToCart} className="add-cart-item">Add to Cart</button>
         </div>
-        <Link className="go-to-cart" path to="/cart"><img width="30px" src={cartButton}/></Link>
+        <Link className="go-to-cart" path to="/cart"><img width="100px" src={props.darkmode ? darkmodeCart : cartButton}/></Link>
         </div>
         </form>
         </div>

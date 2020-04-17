@@ -51,9 +51,9 @@ function App() {
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/edibles" component={edibles} />
-        <Route exact path="/edibles/:id" render={props => <Item {...props} item={value}/>}/>
+        <Route exact path="/edibles/:id" render={props => <Item {...props} item={value} darkmode={darkMode}/>}/>
         <Route exact path="/leaves" component={leaves} />
-        <Route exact path="/leaves/:id" render={props => <LeafItem {...props} item={leavesValue}/> } />
+        <Route exact path="/leaves/:id" render={props => <LeafItem {...props} item={leavesValue} darkmode={darkMode}/> } />
         <Route exact path="/cart" component={Cart} />
         </div>
     </div>

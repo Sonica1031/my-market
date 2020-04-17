@@ -1,6 +1,7 @@
 import React from 'react';
 import gummi from '../images/gummi.jpeg';
 import cartButton from '../images/button-cart.png';
+import darkmodeCart from '../images/darkmode-cart.png'
 import { Link} from 'react-router-dom';
 
 export const Item = (props) =>{
@@ -14,10 +15,6 @@ export const Item = (props) =>{
     console.log(result);
     qty[0].value = "";
     }
-    let img = document.createElement("img");
-    img.src = item.imageSRC
-    let divForImage = document.getElementsByClassName("edible-single")
-    
     return (
         <div className="edible-single">
         <p className="aTagForEdibles">{item.description}</p>
@@ -35,7 +32,7 @@ export const Item = (props) =>{
         </label>
         <button onClick={addToCart} className="add-cart-item">Add to Cart</button>
         </div>
-        <Link className="go-to-cart" path to="/cart"><img width="30px" src={cartButton}/></Link>
+        <Link className="go-to-cart" path to="/cart"><img className="cartImage" width="100px" src={props.darkmode ? darkmodeCart : cartButton}/></Link>
         </div>
         </form>
         </div>

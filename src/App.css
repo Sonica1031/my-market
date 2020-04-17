@@ -61,13 +61,13 @@ nav{
   margin: 10px;
 }
 .cart{
-  max-height: 60px;
+  max-height: 150px;
   display: flex;
   align-items: center;
 }
 
 .go-to-cart{
-  max-height: 60px;
+  max-height: 150px;
   align-self: center;
   margin: 10px;
 }
