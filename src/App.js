@@ -10,10 +10,27 @@ import leaves from './components/leaves';
 import LeafItem from './components/LeafItem';
 import { Cart } from './components/cart';
 import {BrowserRouter as Router} from 'react-router-dom';
+import useDarkMode from './hooks/useDarkMode';
 
 function App() {
   const [value, setValue] = useState(edible);
   const [leavesValue, setLeavesValue] = useState(leaf);
+  const [darkMode, setDarkMode] = useDarkMode(false)
+
+  let darkmode = document.getElementsByClassName("darkmode");
+  const toggleButton = () => {
+    setDarkMode(!darkMode)
+  }
+  const changing = () =>{
+    if(darkMode === false){
+      darkmode[0].classList.add("darkmargin")
+
+      setDarkMode(true)
+    }else{
+      darkmode[0].classList.remove("darkmargin")
+      setDarkMode(false)
+    }
+  }
 
   return (
     <Router>
@@ -24,6 +41,13 @@ function App() {
         <Link className="aTag" path to="/leaves">Leaves</Link>
         <Link className="aTag" path to="/accessories">Accessories</Link>
       </header>
+      <div className="dark-mode__toggle">
+        <div
+          onClick={changing}
+          onChange={toggleButton}
+          className={"darkmode"}
+        />
+      </div>
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/edibles" component={edibles} />

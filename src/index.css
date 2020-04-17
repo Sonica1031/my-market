@@ -16,3 +16,25 @@ body {
 *{
   box-sizing: border-box;
 }
+.dark-mode__toggle {
+  background:#248729;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+  margin: 10px;
+}
+
+.darkmode {
+  background: #432244;
+  border-radius: 50%;
+  height:19px;
+  border: 1px solid black;
+  width: 20px;
+  position: relative;
+}
+
+.darkmargin {
+  margin-left: 20px;
+}

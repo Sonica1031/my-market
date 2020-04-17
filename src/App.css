@@ -79,3 +79,10 @@ nav{
 .centertext{
   text-align: center;
 }
+
+.dark-mode{
+  background: url('./images/Dark\ Mode.png');
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 100%;
+}
