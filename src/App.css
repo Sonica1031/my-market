@@ -86,3 +86,8 @@ nav{
   background-color: black;
   height: 100vh;
 }
+
+label{
+  color: #248729;
+  font-weight: 900;
+}
