@@ -84,8 +84,8 @@ nav{
   background: url('./images/Dark\ Mode.png');
   background-repeat: no-repeat;
   background-color: black;
-  height: 100vh;
-}
+  height: 100vmax;
+  }
 
 label{
   color: #248729;
