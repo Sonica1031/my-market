@@ -1,9 +1,28 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import App from './App'
+import edibles from './components/edibles'
 
-test('renders learn react link', () => {
+
+test('renders App without crashing', () => {
+  render(<App />);
+})
+
+test('renders all nav bars', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const home = getByText(/home/i)
+  const edibles = getByText(/edibles/i);
+  const leaves = getByText(/leaves/i);
+  const accessories = getByText(/accessories/i);
+  expect(home).toBeInTheDocument();
+  expect(edibles).toBeInTheDocument();
+  expect(leaves).toBeInTheDocument();
+  expect(accessories).toBeInTheDocument();
 });
+
+test('it renders without crashing', () =>{
+  render(
+    <ediles />
+  )
+})
+

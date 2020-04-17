@@ -10,12 +10,18 @@ nav{
   margin-top: 300px;
 }
 
-a {
+.aTag {
   text-decoration: none;
   padding: 10px;
   font-size: 5rem;
   color: #248729;
   text-shadow: 2px 2px 2px #432244;
+  font-weight: 900;
+}
+.aTagForEdibles{
+  text-decoration: none;
+  font-size: 3rem;
+  color: #248729;
   font-weight: 900;
 }
 
@@ -24,7 +30,7 @@ a {
 }
 
 .edible-container{
-  margin-top: 200px;
+  margin-top: 250px;
   padding: 10px;
   width: 100vw;
   display: flex;
@@ -38,4 +44,34 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
+}
+
+.edible-single{
+  margin: 200px ;
+  padding: 10px;
+  height: auto;
+}
+
+.flex-cart{
+  display: flex;
+  justify-content: flex-start;
+}
+.qty{
+  width: 30px;
+  margin: 10px;
+}
+.cart{
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.go-to-cart{
+  max-height: 60px;
+  align-self: center;
+  margin: 10px;
+}
+
+.qtyLabe{
+  font-size: 3rem;
 }
