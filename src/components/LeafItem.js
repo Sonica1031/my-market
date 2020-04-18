@@ -19,7 +19,7 @@ const LeafItem = (props) =>{
         }
 
     return(
-        <div className="edible-single">
+        <div className={`edible-single`}>
             <img src={dryleaves} width="500px"></img>
             <p className="aTagForEdibles">{item.description}</p>
             <form>

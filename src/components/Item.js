@@ -16,7 +16,7 @@ export const Item = (props) =>{
     qty[0].value = "";
     }
     return (
-        <div className="edible-single">
+        <div className={`edible-single`}>
         <p className="aTagForEdibles">{item.description}</p>
         <img src={gummi} width="500px"/>
         <form>

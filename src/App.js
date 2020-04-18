@@ -20,7 +20,7 @@ function App() {
   let darkmode = document.getElementsByClassName("darkmode");
   const toggleButton = () => {
     setDarkMode(!darkMode)
-  }
+    }
   const changing = () =>{
     if(darkMode === false){
       darkmode[0].classList.add("darkmargin")
