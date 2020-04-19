@@ -1,4 +1,4 @@
-.App {
+body {
   background: url("./images/Puff\ Palace.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +85,6 @@ nav{
   background: url('./images/Dark\ Mode.png');
   background-repeat: no-repeat;
   background-color:black;
-  height: 100vmax;
   }
 
 label{
