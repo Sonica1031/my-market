@@ -3,7 +3,7 @@ import { edible } from '../data';
 import { Link } from 'react-router-dom'
 import gummi from '../images/gummi.jpeg';
 
-const edibles = (props) => {
+const Edibles = (props) => {
 return(
     <div className={`edible-container ${props.darkmode ? "" : "dark-mode-black-background"}`}>
     {edible.map(item =>{
@@ -19,4 +19,4 @@ return(
     </div>
 )}
 
-export default edibles
+export default Edibles
