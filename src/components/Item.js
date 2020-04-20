@@ -3,6 +3,7 @@ import gummi from '../images/gummi.jpeg';
 import cartButton from '../images/button-cart.png';
 import darkmodeCart from '../images/darkmode-cart.png'
 import { Link} from 'react-router-dom';
+import Axios from 'axios';
 
 export const Item = (props) =>{
     const item = props.item.find( item => `${item.id}` === props.match.params.id )
@@ -13,6 +14,18 @@ export const Item = (props) =>{
     let qtyInt = parseInt(qty[0].value)
     let result = item.qty + qtyInt
     console.log(result);
+    let sending = {
+        ...item,
+        qty: result
+       }
+    Axios
+    .put(`https://puff-palace.herokuapp.com/edibles/${item.id}`, sending)
+    .then(res => {
+        console.log(res.data)
+    })
+    .catch(err =>{
+        console.log(err);
+    })
     qty[0].value = "";
     }
     return (
