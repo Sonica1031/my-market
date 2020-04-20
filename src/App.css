@@ -25,6 +25,12 @@ nav{
   font-weight: 900;
 }
 
+.aTagForCart{
+  font-size: 2rem;
+  color: #248729;
+  font-weight: 900;
+}
+
 .App-header{
   padding-top: 40px;
 }

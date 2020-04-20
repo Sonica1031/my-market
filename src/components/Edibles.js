@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { edible } from '../data';
 import { Link } from 'react-router-dom'
 import gummi from '../images/gummi.jpeg';
 import Axios from 'axios';

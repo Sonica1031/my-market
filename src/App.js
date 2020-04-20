@@ -1,21 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import {Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Edibles from './components/Edibles';
 import { Item } from './components/Item';
-import { edible } from './data';
 import { leaf } from './data';
 import Leaves from './components/Leaves';
 import LeafItem from './components/LeafItem';
 import { Cart } from './components/Cart';
 import {BrowserRouter as Router} from 'react-router-dom';
 import useDarkMode from './hooks/useDarkMode';
+import Axios from 'axios';
 
 function App() {
-  const [value, setValue] = useState(edible);
+  const [value, setValue] = useState([]);
   const [leavesValue, setLeavesValue] = useState(leaf);
   const [darkMode, setDarkMode] = useDarkMode(false)
+
+  useEffect(()=>{
+    Axios
+      .get('https://puff-palace.herokuapp.com/edibles/')
+      .then(res => {
+        setValue(res.data);
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  })
+
+
 
   let darkmode = document.getElementsByClassName("darkmode");
   const toggleButton = () => {
