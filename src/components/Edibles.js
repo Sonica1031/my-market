@@ -13,7 +13,7 @@ const Edibles = (props) => {
             })
             .catch(err =>{
                 console.log(err)
-            })},[])
+            })},[edibleItems])
            
 return(
     <div className={`edible-container ${props.darkmode ? "" : "dark-mode-black-background"}`}>
