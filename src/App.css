@@ -1,0 +1,93 @@
+body {
+  background: url("./images/Puff\ Palace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+nav{
+  margin-top: 300px;
+}
+
+.aTag {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 5rem;
+  color: #248729;
+  text-shadow: 2px 2px 2px #432244;
+  font-weight: 900;
+}
+.aTagForEdibles{
+  text-decoration: none;
+  font-size: 3rem;
+  color: #248729;
+  font-weight: 900;
+}
+
+.App-header{
+  padding-top: 40px;
+}
+
+.edible-container{
+  margin-top: 200px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+
+}
+
+.columns{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.edible-single{
+  margin: 200px ;
+  padding: 10px;
+  height: auto;
+}
+
+.flex-cart{
+  display: flex;
+  justify-content: flex-start;
+}
+.qty{
+  width: 30px;
+  margin: 10px;
+}
+.cart{
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.go-to-cart{
+  max-height: 150px;
+  align-self: center;
+  margin: 10px;
+}
+
+.qtyLabe{
+  font-size: 3rem;
+}
+
+.centertext{
+  text-align: center;
+}
+
+.dark-mode{
+  background: url('./images/Dark\ Mode.png');
+  background-repeat: no-repeat;
+  background-color:black;
+  }
+
+label{
+  color: #248729;
+  font-weight: 900;
+}
