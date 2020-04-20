@@ -13,7 +13,7 @@ const [selling, setSelling] = useState([])
             .catch(err => {
                 console.log(err)
             })
-    },[selling])
+    },[setSelling])
 
     return(
         <div>
