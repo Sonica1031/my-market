@@ -41,7 +41,7 @@ const [selling, setSelling] = useState([])
                 })}
                 <p className="aTagForCart">Price: {selling.reduce((total, num) => {
                   return total + num.price * num.qty;
-                },0)}.00</p>
+                },0)}</p>
         </div>
     );
 }
