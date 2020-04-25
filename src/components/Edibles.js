@@ -24,7 +24,7 @@ return(
           <Link className="aTagForEdibles" path to={`./edibles/${item.id}`}>
               <div className="columns">
               <p>{item.description}</p>
-              <img src={gummi} width="500px"/>
+              <img src={gummi} width="300px"/>
               </div>
           </Link>
       )

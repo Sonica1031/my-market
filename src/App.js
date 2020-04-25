@@ -10,6 +10,7 @@ import LeafItem from './components/LeafItem';
 import { Cart } from './components/Cart';
 import {BrowserRouter as Router} from 'react-router-dom';
 import useDarkMode from './hooks/useDarkMode';
+import Login from './components/Login';
 import Axios from 'axios';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Link className="aTag" path to="/">Home</Link>
+        <Link className="aTag" path to="/login">Login</Link>
         <Link className="aTag" path to="/edibles">Edibles</Link>
         <Link className="aTag" path to="/leaves">Leaves</Link>
         <Link className="aTag" path to="/accessories">Accessories</Link>
@@ -63,6 +65,7 @@ function App() {
       </div>
       <div>
         <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/edibles" component={Edibles} />
         <Route exact path="/edibles/:id" render={props => <Item {...props} item={value} darkmode={darkMode}/>}/>
         <Route exact path="/leaves" component={Leaves} />

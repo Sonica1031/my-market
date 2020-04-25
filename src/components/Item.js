@@ -31,7 +31,7 @@ export const Item = (props) =>{
     return (
         <div className={`edible-single`}>
         <p className="aTagForEdibles">{item.description}</p>
-        <img src={gummi} width="500px"/>
+        <img src={gummi} width="300px"/>
         <form>
         <div className="flex-cart">
         <div className="cart">

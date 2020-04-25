@@ -13,7 +13,7 @@ const Leaves = (props) =>{
                 <p>
                     {item.description}
                 </p>
-                <img src={dryleaves} width="500px"/>
+                <img src={dryleaves} width="300px"/>
             </div>
             </Link>
         )
