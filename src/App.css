@@ -129,7 +129,7 @@ label{
   margin: 10px;
 }
 
-@media only screen and (max-width: 990px){
+@media only screen and (max-width:1180px){
   .App-header{
     display: flex;
     flex-direction: column;
