@@ -23,6 +23,7 @@ const Login = () => {
                 Axios
                     .post('https://puff-palace.herokuapp.com/users/logon', result)
                     .then(res => {
+                        console.log(res)
                         localStorage.setItem("username", res.data[0])
                         localStorage.setItem("key", res.data[1])
                     })
