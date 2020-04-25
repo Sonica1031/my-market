@@ -23,7 +23,8 @@ const Login = () => {
                 Axios
                     .post('https://puff-palace.herokuapp.com/users/logon', result)
                     .then(res => {
-                        console.log("REMEMBER TO ERASE THIS LINE", res.data);
+                        localStorage.setItem("username", res.data[0])
+                        localStorage.setItem("key", res.data[1])
                     })
                     .catch(err => {
                         console.log(err);
