@@ -2,22 +2,12 @@
 import React, { useState, useEffect} from 'react';
 import Axios from 'axios';
 
-export const Cart = () =>{
-const [selling, setSelling] = useState([])
-    useEffect(() =>{
-        Axios
-            .get('https://puff-palace.herokuapp.com/edibles/')
-            .then(res => {
-                setSelling(res.data.filter(item => item.qty > 0))
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    },[setSelling])
-
+export const Cart = (props) =>{
+    console.log("cart", props)
+    const key = window.localStorage.getItem("key")
     return(
         <div>
-            {selling.map(item =>{
+            {/* {cartInformation.map(item =>{
                 return(
                     <div>
                     <p className="aTagForCart">
@@ -28,9 +18,9 @@ const [selling, setSelling] = useState([])
                     </p>
                     <button className="aTagForCart" onClick={() => {
                         Axios
-                            .put(`https://puff-palace.herokuapp.com/edibles/${item.id}`, {...item, qty: 0})
+                            .delete(`https://puff-palace.herokuapp.com/edibles/${item.id}`, {key : key})
                             .then(res =>{
-                                setSelling(res.data.filter(item => item.qty > 0));
+                                console.log(res.data)
                             })
                             .catch(err =>{
                                 console.log(err)
@@ -39,9 +29,9 @@ const [selling, setSelling] = useState([])
                     </div>
                 )
                 })}
-                <p className="aTagForCart">Price: {selling.reduce((total, num) => {
+                <p className="aTagForCart">Price: {cartInformation.reduce((total, num) => {
                   return total + num.price * num.qty;
-                },0)}</p>
+                },0)}</p> */}
         </div>
     );
 }

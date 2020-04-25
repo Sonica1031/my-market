@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import gummi from '../images/gummi.jpeg';
 import Axios from 'axios';
 
+
 const Edibles = (props) => {
     const [edibleItems, setEdibleItems] = useState([]);
     useEffect(() =>{

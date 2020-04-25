@@ -20,7 +20,6 @@ const Register = () => {
              Axios
                  .post('https://puff-palace.herokuapp.com/users/register', result)
                  .then(res => {
-                     setValue(res.data);
                      alert(res.data)
                  })
                  .catch(err => {

@@ -72,7 +72,6 @@ function App() {
         <Route exact path="/edibles/:id" render={props => <Item {...props} item={value} darkmode={darkMode}/>}/>
         <Route exact path="/leaves" component={Leaves} />
         <Route exact path="/leaves/:id" render={props => <LeafItem {...props} item={leavesValue} darkmode={darkMode}/> } />
-        <Route exact path="/cart" component={Cart} />
         <Route exact path="/register" component={Register} />
         </div>
     </div>
