@@ -37,6 +37,7 @@ nav{
   flex-direction: row;
   height: auto;
   flex-wrap: wrap;
+
 }
 
 .columns{
@@ -83,7 +84,7 @@ nav{
 .dark-mode{
   background: url('./images/Dark\ Mode.png');
   background-repeat: no-repeat;
-  background-color: black;
+  background-color:black;
   height: 100vmax;
   }
 

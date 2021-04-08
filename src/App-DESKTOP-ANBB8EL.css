@@ -1,0 +1,173 @@
+body {
+  background: url("./images/Puff\ Palace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+nav{
+  margin-top: 300px;
+}
+
+.aTag {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 5rem;
+  color: #248729;
+  text-shadow: 2px 2px 2px #432244;
+  font-weight: 900;
+}
+.aTagForEdibles{
+  text-decoration: none;
+  font-size: 3rem;
+  color: #248729;
+  font-weight: 900;
+}
+
+.aTagForCart{
+  font-size: 2rem;
+  color: #248729;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.App-header{
+  padding-top: 40px;
+}
+
+.edible-container{
+  margin-top: 250px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.columns{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.edible-single{
+  margin: 200px ;
+  padding: 10px;
+  height: auto;
+}
+
+.flex-cart{
+  display: flex;
+  justify-content: flex-start;
+}
+.qty{
+  width: 30px;
+  margin: 10px;
+}
+.cart{
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.go-to-cart{
+  max-height: 150px;
+  align-self: center;
+  margin: 10px;
+}
+
+.qtyLabe{
+  font-size: 3rem;
+}
+
+.centertext{
+  text-align: center;
+}
+
+.dark-mode{
+  background: url('./images/Dark\ Mode.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  }
+
+label{
+  color: #248729;
+  font-weight: 900;
+}
+
+.login-form{
+  display: flex;
+  margin: auto;
+  margin-top: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #248729;
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(67, 34, 68, .5);
+  
+}
+
+.button-placement{
+  margin: 10px;
+  margin-right: 40px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.input-placement{
+  padding: 10px;
+  margin: 10px;
+}
+
+@media only screen and (max-width:1180px){
+  .App-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0;
+  }
+
+  .aTag{
+    border-bottom: 2px solid darkgreen;
+    background:rgb(67, 34, 68, .5);
+    width: 100%;
+    text-align: center;
+  }
+
+  .aTag:hover{
+    background: #432244;
+  }
+  .edible-container{
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+  .columns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .edible-single{
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .login-form{
+    margin-top:0;
+  }
+}
