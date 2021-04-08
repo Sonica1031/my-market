@@ -7,7 +7,7 @@ export const Cart = (props) =>{
     const key = window.localStorage.getItem("key")
     return(
         <div>
-            {/* {cartInformation.map(item =>{
+            {cartInformation.map(item =>{
                 return(
                     <div>
                     <p className="aTagForCart">
@@ -31,7 +31,7 @@ export const Cart = (props) =>{
                 })}
                 <p className="aTagForCart">Price: {cartInformation.reduce((total, num) => {
                   return total + num.price * num.qty;
-                },0)}</p> */}
+                },0)}</p>
         </div>
     );
 }

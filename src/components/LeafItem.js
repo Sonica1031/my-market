@@ -3,6 +3,7 @@ import dryleaves from '../images/dryleaves.jpeg';
 import cartButton from '../images/button-cart.png';
 import darkmodeCart from '../images/darkmode-cart.png'
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 
 const LeafItem = (props) =>{
@@ -14,13 +15,15 @@ const LeafItem = (props) =>{
         e.preventDefault()
         let qtyInt = parseInt(qty[0].value)
         let result = item.qty + qtyInt
-        console.log(result);
-        qty[0].value = "";
         }
 
     return(
         <div className={`edible-single`}>
+<<<<<<< HEAD
             <img src={dryleaves} width="500px"></img>
+=======
+            <img src={dryleaves} width="300px"></img>
+>>>>>>> 6943b227e7557d5635a7e1961ca0ab830bfa7625
             <p className="aTagForEdibles">{item.description}</p>
             <form>
         <div className="flex-cart">
