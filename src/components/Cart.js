@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react';
 import Axios from 'axios';
 
 export const Cart = (props) =>{
-    const [cartItems, setCartItems] = useState();
+    const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
     Axios
             .get('https://puff-palace.herokuapp.com/user/:id/cart')
