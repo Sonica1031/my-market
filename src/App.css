@@ -93,15 +93,10 @@ nav{
 .dark-mode{
   background: url('./images/Dark\ Mode.png');
   background-repeat: no-repeat;
-<<<<<<< HEAD
-  background-color:black;
-  height: 100vmax;
-=======
   background-size: cover;
   background-color: black;
   width: 100%;
   height: 100vh;
->>>>>>> 6943b227e7557d5635a7e1961ca0ab830bfa7625
   }
 
 label{
