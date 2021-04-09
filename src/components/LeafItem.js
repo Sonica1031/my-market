@@ -19,11 +19,7 @@ const LeafItem = (props) =>{
 
     return(
         <div className={`edible-single`}>
-<<<<<<< HEAD
-            <img src={dryleaves} width="500px"></img>
-=======
             <img src={dryleaves} width="300px"></img>
->>>>>>> 6943b227e7557d5635a7e1961ca0ab830bfa7625
             <p className="aTagForEdibles">{item.description}</p>
             <form>
         <div className="flex-cart">
