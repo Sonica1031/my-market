@@ -4,6 +4,7 @@ import Axios from 'axios';
 
 export const Cart = (props) =>{
     const [cartItems, setCartItems] = useState();
+    useEffect(() => {
     Axios
             .get('https://puff-palace.herokuapp.com/user/:id/cart')
             .then(res => {
@@ -11,7 +12,7 @@ export const Cart = (props) =>{
             })
             .catch(err =>{
                 console.log(err)
-            })},[setCartItems])
+            })},[setCartItems]);
     return(
         <div>
             {cartItems.map(item =>{
