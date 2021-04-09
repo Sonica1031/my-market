@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.449a11ce.chunk.css",
+    "main.js": "/static/js/main.2119c453.chunk.js",
+    "main.js.map": "/static/js/main.2119c453.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c564db4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c564db4.js.map",
+    "static/js/2.c538a86d.chunk.js": "/static/js/2.c538a86d.chunk.js",
+    "static/js/2.c538a86d.chunk.js.map": "/static/js/2.c538a86d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1ac912453481256af371de6b4c5ec461.js": "/precache-manifest.1ac912453481256af371de6b4c5ec461.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.449a11ce.chunk.css.map": "/static/css/main.449a11ce.chunk.css.map",
+    "static/js/2.c538a86d.chunk.js.LICENSE.txt": "/static/js/2.c538a86d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Puff Palace.ae85d684.png",
+    "static/media/button-cart.png": "/static/media/button-cart.f7df56c1.png",
+    "static/media/darkmode-cart.png": "/static/media/darkmode-cart.86af8ad0.png",
+    "static/media/dryleaves.jpeg": "/static/media/dryleaves.c9d0fdc7.jpeg",
+    "static/media/gummi.jpeg": "/static/media/gummi.74662687.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c564db4.js",
+    "static/js/2.c538a86d.chunk.js",
+    "static/css/main.449a11ce.chunk.css",
+    "static/js/main.2119c453.chunk.js"
+  ]
+}
