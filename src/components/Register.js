@@ -4,7 +4,6 @@ import Axios from 'axios';
 const Register = () => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
-    const [value, setValue] = useState("")
 
     const result = {name: username, password: password};
 

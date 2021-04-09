@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import gummi from "../images/gummi.jpeg";
 import cartButton from "../images/button-cart.png";
 import darkmodeCart from "../images/darkmode-cart.png";
-import { Link, Route, Router } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { Cart } from "./Cart";
 import Axios from "axios";
 

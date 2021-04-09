@@ -7,7 +7,6 @@ import { Item } from './components/Item';
 import { leaf } from './data';
 import Leaves from './components/Leaves';
 import LeafItem from './components/LeafItem';
-import { Cart } from './components/Cart';
 import {BrowserRouter as Router} from 'react-router-dom';
 import useDarkMode from './hooks/useDarkMode';
 import Login from './components/Login';
