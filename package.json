@@ -11,20 +11,27 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-<<<<<<< HEAD
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "websocket-extensions": "^0.1.4"
-=======
-    "react-scripts": "^3.4.1",
-    "redux": "^4.0.5"
->>>>>>> 6943b227e7557d5635a7e1961ca0ab830bfa7625
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "create-global-node-modules-folder": "if not exist \"%appdata%\\npm\\node_modules\" mkdir %appdata%\\npm\\node_modules",
+    "npm-i-g": "npm i npm@latest -g",
+    "npm-check-i-g": "npm i npm-check@latest -g",
+    "eslint-i-g": "npm i eslint@latest -g",
+    "stylelint-i-g": "npm i stylelint@latest -g",
+    "npm-check-u-l": "npm-check \"C:\\Program Files\\nodejs\\node_modules\\npm\" -y",
+    "npm-check-u-g": "npm-check \"C:\\Program Files\\nodejs\\node_modules\\npm\" -y -g",
+    "npm-deep-update-l": "npm update --depth 9999 --dev",
+    "npm-deep-update-g": "npm update --depth 9999 --dev -g",
+
+    "npm-cache-clear": "npm cache clear --force",
+    "update-all-modules": "npm run create-global-node-modules-folder && npm run npm-i-g && npm run npm-check-i-g && npm run eslint-i-g && npm run stylelint-i-g && npm run npm-check-u-l && npm run npm-check-u-g && npm run npm-deep-update-l && npm run npm-deep-update-g && npm run npm-cache-clear"
   },
   "eslintConfig": {
     "extends": "react-app"
