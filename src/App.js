@@ -15,8 +15,10 @@ import Axios from 'axios';
 
 function App() {
   const [value, setValue] = useState([]);
-  const [leavesValue, setLeavesValue] = useState(leaf);
+  const [leavesValue, setLeavesValue] = useState();
   const [darkMode, setDarkMode] = useDarkMode(false)
+
+  setLeavesValue(leaf);
 
   useEffect(()=>{
     Axios
