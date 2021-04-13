@@ -12,7 +12,7 @@ export const Cart = (props) =>{
             })
             .catch(err =>{
                 console.log(err)
-            })},[cartItems]);
+            })},[setCartItems]);
     return(
         <div>
             {cartItems.map(item =>{

@@ -5,7 +5,7 @@ const Register = () => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
-    const result = {name: username, password: password};
+    const result = {username: username, password: password};
 
        const usernameChange = (e) => {
             setUsername(e.target.value)

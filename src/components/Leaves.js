@@ -14,7 +14,7 @@ const Leaves = (props) => {
             })
             .catch(err =>{
                 console.log(err)
-            })},[leavesItems])
+            })},[setLeavesItems])
            
 return(
     <div className={`edible-container ${props.darkmode ? "" : "dark-mode-black-background"}`}>
