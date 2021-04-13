@@ -6,13 +6,13 @@ export const Cart = (props) =>{
     const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
     Axios
-            .get('https://puff-palace.herokuapp.com/user/:id/cart')
+            .get('https://puff-palace.herokuapp.com/user/:id/cart/:userID/')
             .then(res => {
                 setCartItems(res.data)
             })
             .catch(err =>{
                 console.log(err)
-            })},[setCartItems]);
+            })},[cartItems]);
     return(
         <div>
             {cartItems.map(item =>{
@@ -21,12 +21,22 @@ export const Cart = (props) =>{
                     <p className="aTagForCart">
                         {item.description}
                     </p>
-                    <p className="aTagForCart">
+                    <p className="aTagForCart"
+                    onChange={() =>{
+                        Axios
+                        .put(`https://puff-palace.herokuapp.com/user/:id/cart/:userID/${item.id}/`)
+                        .then(res =>{
+                            console.log(res.data)
+                        })
+                        .catch(err =>{
+                            console.log(err);
+                        })
+                    }}>
                        QTY: {item.qty}
                     </p>
                     <button className="aTagForCart" onClick={() => {
                         Axios
-                            .delete(`https://puff-palace.herokuapp.com/user/:id/cart/${item.id}`)
+                            .delete(`https://puff-palace.herokuapp.com/user/:id/cart/:userID/${item.id}/`)
                             .then(res =>{
                                 console.log(res.data)
                             })

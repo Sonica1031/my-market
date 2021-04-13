@@ -3,10 +3,9 @@ import './App.css';
 import {Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Edibles from './components/Edibles';
-import { Item } from './components/Item';
-import { leaf } from './data';
 import Leaves from './components/Leaves';
-import LeafItem from './components/LeafItem';
+import { Item } from './components/Item';
+import { LeafItem } from './components/LeafItem'
 import {BrowserRouter as Router} from 'react-router-dom';
 import useDarkMode from './hooks/useDarkMode';
 import Login from './components/Login';
@@ -15,10 +14,9 @@ import Axios from 'axios';
 
 function App() {
   const [value, setValue] = useState([]);
-  const [leavesValue, setLeavesValue] = useState();
+  const [leaves, setLeaves] = useState([]);
   const [darkMode, setDarkMode] = useDarkMode(false)
 
-  setLeavesValue(leaf);
 
   useEffect(()=>{
     Axios
@@ -72,7 +70,7 @@ function App() {
         <Route exact path="/edibles" component={Edibles} />
         <Route exact path="/edibles/:id" render={props => <Item {...props} item={value} darkmode={darkMode}/>}/>
         <Route exact path="/leaves" component={Leaves} />
-        <Route exact path="/leaves/:id" render={props => <LeafItem {...props} item={leavesValue} darkmode={darkMode}/> } />
+        <Route exact path="/leaves/:id" render={props => <LeafItem {...props} item={leaves} darkmode={darkMode}/> } />
         <Route exact path="/register" component={Register} />
         </div>
     </div>

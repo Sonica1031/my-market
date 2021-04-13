@@ -25,7 +25,7 @@ export const Item = (props) => {
         qty: result,
       },
     ];
-    Axios.post(`https://puff-palace.herokuapp.com/edibles/${item.id}`, sending)
+    Axios.post(`https://puff-palace.herokuapp.com/users/:id/cart/:userID/${item.id}`, sending)
       .then((res) => {
         setValue(res.data);
       })
