@@ -7,7 +7,7 @@ body {
 }
 
 nav{
-  margin-top: 300px;
+  margin-top: 10px;
 }
 
 .aTag {
@@ -18,11 +18,21 @@ nav{
   text-shadow: 2px 2px 2px #432244;
   font-weight: 900;
 }
-.aTagForEdibles{
+.aTagForBows{
   text-decoration: none;
   font-size: 3rem;
   color: #248729;
   font-weight: 900;
+  width: 350px;
+  height: auto;
+}
+
+.aTagForBowsId{
+  text-decoration: none;
+  font-size: 3rem;
+  color: #248729;
+  font-weight: 900;
+  height: auto;
 }
 
 .aTagForCart{
@@ -33,11 +43,11 @@ nav{
 }
 
 .App-header{
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
-.edible-container{
-  margin-top: 250px;
+.bows-container{
+  margin-top: 30px;
   padding: 10px;
   width: 100%;
   display: flex;
@@ -50,13 +60,12 @@ nav{
 .columns{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   padding: 20px;
 }
 
-.edible-single{
+.bows-single{
   margin: 200px ;
   padding: 10px;
   height: auto;
@@ -148,7 +157,7 @@ label{
   .aTag:hover{
     background: #432244;
   }
-  .edible-container{
+  .bows-container{
     display: flex;
     margin: 0;
     justify-content: space-evenly;
@@ -161,7 +170,7 @@ label{
     padding: 0;
     margin: 0;
   }
-  .edible-single{
+  .bows-single{
     margin: 0;
     display:flex;
     flex-direction: column;

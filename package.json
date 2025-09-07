@@ -3,35 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.21.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.3",
-    "redux": "^4.0.5",
-    "sqlite3": "^5.0.2",
-    "websocket-extensions": "^0.1.4"
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "axios": "^1.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "sqlite3": "^5.1.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "create-global-node-modules-folder": "if not exist \"%appdata%\\npm\\node_modules\" mkdir %appdata%\\npm\\node_modules",
-    "npm-i-g": "npm i npm@latest -g",
-    "npm-check-i-g": "npm i npm-check@latest -g",
-    "eslint-i-g": "npm i eslint@latest -g",
-    "stylelint-i-g": "npm i stylelint@latest -g",
-    "npm-check-u-l": "npm-check \"C:\\Program Files\\nodejs\\node_modules\\npm\" -y",
-    "npm-check-u-g": "npm-check \"C:\\Program Files\\nodejs\\node_modules\\npm\" -y -g",
-    "npm-deep-update-l": "npm update --depth 9999 --dev",
-    "npm-deep-update-g": "npm update --depth 9999 --dev -g",
-    "npm-cache-clear": "npm cache clear --force",
-    "update-all-modules": "npm run create-global-node-modules-folder && npm run npm-i-g && npm run npm-check-i-g && npm run eslint-i-g && npm run stylelint-i-g && npm run npm-check-u-l && npm run npm-check-u-g && npm run npm-deep-update-l && npm run npm-deep-update-g && npm run npm-cache-clear"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "update-deps": "npx npm-check-updates -u && npm install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^7.1.4",
+    "vitest": "^3.2.4"
   }
 }
