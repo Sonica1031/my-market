@@ -74,10 +74,6 @@ nav{
   display: flex;
   justify-content: flex-start;
 }
-.qty{
-  width: 30px;
-  margin: 10px;
-}
 .cart{
   max-height: 150px;
   display: flex;
@@ -88,10 +84,6 @@ nav{
   max-height: 150px;
   align-self: center;
   margin: 10px;
-}
-
-.qtyLabe{
-  font-size: 3rem;
 }
 
 .centertext{
@@ -109,6 +101,10 @@ nav{
 label{
   color: #248729;
   font-weight: 900;
+}
+
+p{
+  font-size: 3rem;
 }
 
 .login-form{

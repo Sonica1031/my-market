@@ -24,7 +24,7 @@ const Register = () => {
              Axios
                  .post('https://fakestoreapi.com/users', result)
                  .then(res => {
-                     alert(res.data)
+                     alert("you registered");
                  })
                  .catch(err => {
                      console.log(err);

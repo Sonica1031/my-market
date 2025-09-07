@@ -47,7 +47,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <header className="App-header">
-          <nav>
+          <nav className="App-header">
             <NavLink to="/" className="aTag">
               Home
             </NavLink>
