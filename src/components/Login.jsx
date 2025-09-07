@@ -6,21 +6,18 @@ const Login = () => {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
 
-    const result = {username: username,  password: password};
-
        const usernameChange = (e) => {
-           e.preventDefault();
            setUsername(e.target.value);
        }
 
 
        const passwordChange = (e) => {
-           e.preventDefault();
            setPassword(e.target.value)
        }
        
        const sendingInformation = (e) =>{
            e.preventDefault();
+           const result = {username: username,  password: password};
                 Axios
                     .post('https://fakestoreapi.com/auth/login', result)
                     .then(res => {
