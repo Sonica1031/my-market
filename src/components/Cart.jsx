@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import Axios from 'axios';
 
-export const Cart = () =>{
+export const Cart = ({darkMode}) =>{
     const [cartItems, setCartItems] = useState([]);
     const { id } = useParams();
 
@@ -59,7 +59,7 @@ export const Cart = () =>{
         <div>
             {cartItems.map(items=>(
                     <div>
-                        <div className="columns">
+                        <div className={`columns ${darkMode ? 'dark-mode' : ''}`}>
                             <p>{items.title}</p>
                             <img src={items.image} width="150" alt={items.description} />
                             <p>QTY: {items.quantity}</p>

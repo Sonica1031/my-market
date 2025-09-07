@@ -1,5 +1,4 @@
 body {
-  background: url("./images/Puff\ Palace.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -100,13 +99,11 @@ nav{
 }
 
 .dark-mode{
-  background: url('./images/Dark\ Mode.png');
-  background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
   color:#248729;
   width: 100%;
-  height: 100vh;
+  height: auto;
   }
 
 label{
