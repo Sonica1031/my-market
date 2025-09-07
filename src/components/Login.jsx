@@ -11,7 +11,6 @@ const Login = () => {
        const usernameChange = (e) => {
            e.preventDefault();
            setUsername(e.target.value);
-           windows.localStorage.setItem("username", userName);
        }
 
 
@@ -25,7 +24,10 @@ const Login = () => {
                 Axios
                     .post('https://fakestoreapi.com/auth/login', result)
                     .then(res => {
+                        if(res.data.token){
                         window.localStorage.setItem("token", res.data.token);
+                        window.localStorage.setItem("username", username);
+                        }
                     })
                     .catch(err => {
                         console.log(err);

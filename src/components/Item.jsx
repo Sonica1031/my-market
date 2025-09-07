@@ -37,7 +37,7 @@ export const Item = ({ darkMode }) => {
 
   const addToCart = (e) => {
     e.preventDefault();
-    if(!item) return;
+    if(!item || !userId) return;
  
     Axios.post(`https://fakestoreapi.com/carts/${userId}`, sending)
       .then((res) => {
@@ -63,7 +63,7 @@ export const Item = ({ darkMode }) => {
           Add to Cart
           </button>
     </div>
-    <Link className="go-to-cart" to={`/cart/${userId}`}>
+    <Link className="go-to-cart" to={`/carts/${userId}`}>
     <img className="cartImage"
           width="100px"
           src={darkMode ? darkmodeCart : cartButton}

@@ -1,51 +1,75 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import Axios from 'axios';
 
-export const Cart = (props) =>{
+export const Cart = () =>{
     const [cartItems, setCartItems] = useState([]);
-    const [userId, setUserId] = useState([]);
-
-   
-    useEffect(() => {
-    const username = window.localStorage.getItem('username');
-    if (username) {
-        Axios
-            .get('https://fakestoreapi.com/users')
-            .then(res =>{
-                const user = res.data.find(u => u.username == username);
-                if (user) {
-                setUserId(user.id);
-                }
-            })
-            .catch(err =>{
-                console.log(err);
-            })
-    }
-    },[])
+    const { id } = useParams();
 
     useEffect(() => {
-    if(userId) {
+    if(id) {
         Axios
-            .get(`https://fakestoreapi.com/carts/${userId}`)
+            .get(`https://fakestoreapi.com/carts/${id}`)
             .then(res => {
-                setCartItems(res.data);
+                const products = res.data.products
+                const productIds = products.map(p => p.productId);
+                return Promise.all(productIds.map(pID =>
+                    Axios
+                        .get(`https://fakestoreapi.com/products/${pID}`)
+                ))
+                        .then(responses => ({products, responses}));
+            })
+            .then(({products, responses}) => {
+                const qtyMap = products.reduce((map, item) => {
+                    map[item.productId] = item.quantity;
+                    return map;
+                }, {});
+                
+                const itemsWithDetails = responses.map((res => {
+                    const productDetail = res.data
+                return {
+                    ...productDetail,
+                    quantity:qtyMap[productDetail.id]
+                }
+                }));
+                setCartItems(itemsWithDetails);
+                console.log('Cart items with details:', itemsWithDetails);
             })
             .catch(err =>{
                 console.log(err)
             })
     }
-        },[userId]);
+        },[id]);
+
+    if(!id){
+        return(
+            <div>
+               <p>
+                You must sign in
+                </p> 
+            </div>
+        )
+    }
+
+    const totalPrice = cartItems.reduce((sum, item) => {
+        return sum + (item.price * item.quantity);
+    }, 0);
 
     return(
         <div>
-            {cartItems.map(item =>{
+            {cartItems.map(items=>(
                     <div>
-                    <p className="aTagForCart">
-                        {item.description}
-                    </p>
+                        <div className="columns">
+                            <p>{items.title}</p>
+                            <img src={items.image} width="150" alt={items.description} />
+                            <p>QTY: {items.quantity}</p>
+                            <p>Price: {items.price * items.quantity}</p>
+                        </div>
                     </div>
-            })}
+            ))}
+            <div className ="columns">Total: {totalPrice}</div>
         </div>
     );
-}
+};
+
 export default Cart;

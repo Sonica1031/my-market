@@ -52,7 +52,7 @@ function App() {
               Home
             </NavLink>
             <NavLink to="/products" className="aTag">
-              Items
+              Products
             </NavLink>
             <NavLink to="/login" className ="aTag">
               Login
@@ -74,7 +74,7 @@ function App() {
           <Route exact path="/" element={<Home darkMode={darkMode}/>} />
           <Route exact path="/products" element={<Bows darkMode={darkMode}/>} />
           <Route path="/products/:id" element={<Item bowItems={value} darkMode={darkMode} />} />
-          <Route path="/cart" element={<Cart darkMode={darkMode}/>} />
+          <Route path="/carts/:id" element={<Cart darkMode={darkMode}/>} />
           <Route path="/login" element={<Login darkMode={darkMode} />} />
           <Route path="/register" element={<Register darkMode={darkMode} />} />       
         </Routes>
