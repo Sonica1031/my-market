@@ -67,7 +67,7 @@ export const Cart = ({darkMode}) =>{
                         </div>
                     </div>
             ))}
-            <div className ="columns">Total: {totalPrice}</div>
+            <p className ="columns">Total: {totalPrice}</p>
         </div>
     );
 };
