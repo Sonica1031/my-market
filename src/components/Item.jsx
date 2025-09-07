@@ -63,7 +63,7 @@ export const Item = ({ darkMode }) => {
           Add to Cart
           </button>
     </div>
-    <Link className="go-to-cart" to={`/carts/${userId}`}>
+    <Link className="go-to-cart" to={userId ? `/carts/${userId}` : `/carts/0`}>
     <img className="cartImage"
           width="100px"
           src={darkMode ? darkmodeCart : cartButton}
