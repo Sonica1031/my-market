@@ -10,7 +10,7 @@ nav{
 }
 
 .aTag {
-  text-decoration: none;
+  border:2px solid;
   padding: 10px;
   font-size: 5rem;
   color: #248729;
@@ -133,7 +133,7 @@ p{
   margin: 10px;
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:800px){
   .App-header{
     display: flex;
     flex-direction: column;
