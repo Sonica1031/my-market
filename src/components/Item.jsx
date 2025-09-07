@@ -35,19 +35,6 @@ export const Item = ({ darkMode }) => {
     }
     },[])
 
-  const addToCart = (e) => {
-    e.preventDefault();
-    if(!item || !userId) return;
- 
-    Axios.post(`https://fakestoreapi.com/carts/${userId}`, sending)
-      .then((res) => {
-        setValue(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
 
   if(!item){
     return <div>Loading...</div>;
@@ -58,11 +45,6 @@ export const Item = ({ darkMode }) => {
       <p className="aTagForBowsId">{item.description}</p>
       <img src={item.image} width="300px" />
       <div className="flex-cart">
-        <div className="cart">
-          <button onClick={addToCart} className="add-cart-item">
-          Add to Cart
-          </button>
-    </div>
     <Link className="go-to-cart" to={userId ? `/carts/${userId}` : `/carts/0`}>
     <img className="cartImage"
           width="100px"
