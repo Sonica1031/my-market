@@ -41,16 +41,18 @@ export const Item = ({ darkMode }) => {
   }
 
   return (
+    <div class-name='flex-cart'>
     <div className={`bows-single`}>
       <p className="aTagForBowsId">{item.description}</p>
       <img src={item.image} width="300px" />
       <div className="flex-cart">
-    <Link className="go-to-cart" to={userId ? `/carts/${userId}` : `/carts/0`}>
-    <img className="cartImage"
-          width="100px"
-          src={darkMode ? darkmodeCart : cartButton}
-    />
-    </Link>
+        <Link className="go-to-cart" to={userId ? `/carts/${userId}` : `/carts/0`}>
+        <img className="cartImage"
+              width="100px"
+              src={darkMode ? darkmodeCart : cartButton}
+        />
+        </Link>
+    </div>
     </div>
     </div>
   );

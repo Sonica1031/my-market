@@ -19,6 +19,8 @@ nav{
 }
 .aTagForBows{
   text-decoration: none;
+  border: 2px solid;
+  margin: 20px;
   font-size: 3rem;
   color: #248729;
   font-weight: 900;
@@ -65,13 +67,14 @@ nav{
 }
 
 .bows-single{
-  margin: 200px ;
   padding: 10px;
+  width: 500px;
   height: auto;
 }
 
 .flex-cart{
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
 }
 .cart{

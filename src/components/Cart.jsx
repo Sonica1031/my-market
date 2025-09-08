@@ -56,7 +56,7 @@ export const Cart = ({darkMode}) =>{
     }, 0);
 
     return(
-        <div>
+        <div className='flex-cart'>
             {cartItems.map(items=>(
                     <div>
                         <div className={`columns ${darkMode ? 'dark-mode' : ''}`}>
